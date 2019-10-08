@@ -1,0 +1,15 @@
+<div class="card border-primary mb-3" style="max-width: 500rem;">
+    <div [ngClass]="setClasses()">
+    <div class="card-header"> {{post.title }}</div>
+    <div class="card-body">
+      <p class="card-text">{{post.content}}</p>
+      <small>- {{post.author}}</small>
+      <br>
+      <br>
+      <form>
+        <br>
+        <input type="text" placeholder="Comment" style="border-style:ridge">
+      </form>
+      <small>{{ post.date}}</small>
+  </div>
+  </div>
