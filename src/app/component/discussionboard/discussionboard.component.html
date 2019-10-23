@@ -1,14 +1,13 @@
+<div *ngIf="posts.length == 0">
+  No posts yet!
+</div>
+<div *ngIf="posts.length > 0">
 <nav class="nav nav-pills">
-    <a class="nav-link active" href="#" style="color:goldenrod">Group 1</a>
-    <a class="nav-link" href="#" style="color:goldenrod">Group 2</a>
-    <a class="nav-link" href="#" style="color:goldenrod">Group 3</a>
+    <a class="nav-link active" href="#" style="color:black">Add New Post</a>
   </nav>
-<dpost *ngFor="let post of posts" [post] = "post">
-   
-</dpost>
-  
 
-<div class="form-group" style="position: relative; bottom: 5px; width:69.5rem;">
-        <label for="exampleFormControlTextarea1"></label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Add a new post"></textarea>
- </div>
+<dpost *ngFor="let post of posts" [post] = "post">
+
+
+</dpost>
+</div>

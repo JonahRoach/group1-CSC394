@@ -1,15 +1,12 @@
-<div class="card border-primary mb-3" style="max-width: 500rem;">
-    <div [ngClass]="setClasses()">
-    <div class="card-header"> {{post.title }}</div>
-    <div class="card-body">
-      <p class="card-text">{{post.content}}</p>
-      <small>- {{post.author}}</small>
-      <br>
-      <br>
-      <form>
-        <br>
-        <input type="text" placeholder="Comment" style="border-style:ridge">
-      </form>
-      <small>{{ post.date}}</small>
-  </div>
-  </div>
+<div class="card border-primary mb-3 img-fluid" style="max-width: 500rem; max-height: 100rem;">
+  <div class="card-header">
+    <img class="card-img-top" src="/assets/profile.png" alt="Card image" style="width: 4%;"> Name
+    <div class="card-img">
+    <a href='/post-detail/{{post.id}}' style="color:black;  outline-style: hidden;">{{post.title }}</a>
+    </div>
+</div>
+  <div>
+    <a href='/post-detail/{{post.id}}' style="color:black;  outline-style: hidden; "><img src="/assets/comments.png" style="width: 4%;" > <img src="/assets/thumbs-up.png" style="width: 2%;" >  </a>
+    </div>
+</div>
+

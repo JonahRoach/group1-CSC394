@@ -8,6 +8,14 @@ import { HomeComponent } from './component/home/home.component';
 import { DiscussionboardComponent } from './component/discussionboard/discussionboard.component';
 import { DPostComponent } from './component/dpost/dpost.component';
 import { SubmissionComponent } from './component/submission/submission.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDividerModule} from '@angular/material/divider';
+import { PostDetailComponent } from './component/post-detail/post-detail.component';
+import { HttpClientModule } from '@angular/common/http'
+import { HttpModule } from '@angular/http'
+
+
+import { CKEditorModule} from '@ckeditor/ckeditor5-angular';
 
 @NgModule({
   declarations: [
@@ -16,11 +24,16 @@ import { SubmissionComponent } from './component/submission/submission.component
     HomeComponent,
     DiscussionboardComponent,
     DPostComponent,
-    SubmissionComponent
+    SubmissionComponent,
+    PostDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatDividerModule,
+    CKEditorModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
