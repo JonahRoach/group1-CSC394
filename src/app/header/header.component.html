@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a class="navbar-brand d-none d-md-block" routerLink="">
+    KB Planner
+  </a>
+
+
+  <!-- Only visible when navbar collapses
+    Collapses links
+    Adds a user icon for account
+  -->
+  <a class="navbar-brand ml-auto mr-auto d-md-none" routerLink="">
+    KB Planner
+  </a>
+
+  <a href="#">
+    <img class="d-md-none" src="../../assets/svg/user-1633249.svg" height="30px" width="30px" />
+  </a>
+
+  <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="">Home</a>
+      </li>
+
+      <!-- Currently no reason to have a dashboard
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+      </li>
+
+      -->
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/calendar">Calendar</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/grades">Grades</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/discussionBoard">Discussion Board</a>
+      </li>
+
+
+      <!--Just for testing
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/signup-step2">Signup Part 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/update-userdata">Update User Info</a>
+      </li>
+
+      !-->
+
+    </ul>
+  </div>
+
+  <a class="account d-none d-md-block" href="#">Profile</a>
+
+</nav>

@@ -1,0 +1,173 @@
+<title>The Kanban Plan Home</title>
+
+<div class="jumbotron jumbotron-fluid text-center bg-blue">
+  <div class="container">
+    <h1>The Kanban Plan</h1>
+    <p>Take your next group project to the next level!</p>
+    <ng-template #register let-modal>
+        
+      <div class="modal-header">
+        <!-- HEADER -->
+        
+        <h4 class="modal-title" id="modal-basic-title">Register</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- BODY -->
+        <div *ngIf="user.uid | async as uid;  else login">
+            User {{uid}} is logged in.   <!-- TEST print to get UID-->
+            <ng-container *ngIf="user.isLoggedIn(); then modal.dismiss('');">
+              <!-- TODO!: Route to main page-->
+            </ng-container>  <!-- Exit modal if already logged in -->
+        </div> 
+        
+        <form>
+            <div class="form-group">
+                <label for="inputUserName">Email</label>
+                <input class="form-control" placeholder="Login Email"
+                        type="text" id="inputUserName" #registerEmail/>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input class="form-control" placeholder="Login Password"
+                        type="password" id="inputPassword" #registerPassword/>
+            </div>
+            <button type="button" class="btn btn-info" (click)="user.login()" >Login With Google</button>
+            
+        </form>
+      </div>
+      <div class="modal-footer">
+        <!-- FOOTER --> 
+        <button type="button" class="btn btn-primary" (click)="user.emailRegister(registerEmail.value, registerPassword.value)">Register</button>
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Close')">Close</button>
+      </div>
+    </ng-template>
+
+    <button type="button" class="btn btn-success" (click)="open(register)" >Sign Up</button>
+
+    <br>
+    <p class="sign-in">Already a member?</p>
+    <!-- <a href="#" class="sign-in grey">Sign in</a> -->
+
+    <ng-template #content let-modal>
+        
+      <div class="modal-header">
+        <!-- HEADER -->
+        
+        <h4 class="modal-title" id="modal-basic-title">Login</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- BODY -->
+        <div *ngIf="user.uid | async as uid;  else login">
+            <!-- User {{uid}} is logged in. debugging purposes-->
+            
+            <ng-container *ngIf="user.isLoggedIn(); then modal.dismiss('');">
+              <!-- TODO!: Route to main page-->
+            </ng-container>  <!-- Exit modal if already logged in -->
+        
+        </div> 
+        <form>
+            <div class="form-group">
+                <label for="inputUserName">Username</label>
+                <input class="form-control"  placeholder="Login Email"
+                        type="text" id="inputUserName" #email/>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input class="form-control" placeholder="Login Password"
+                        type="password" id="inputPassword" #password/>
+            </div>
+            
+            <button type="button" class="btn btn-info" (click)="user.googleLogin()" >Login With Google</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <!-- FOOTER --> 
+        <button type="button" class="btn btn-primary" (click)="user.emailLogin(email.value, password.value)" >Login</button>
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Close')">Close</button>
+        <p>{{user.err}}</p>
+      </div>
+    </ng-template>
+    
+    <button class="btn btn-light btn-sm" (click)="open(content)">Login</button>
+    <!-- <button class="btn btn-light btn-sm" (click)="user.logout()">TEMP: logout</button> -->
+    
+
+
+    <hr>
+  </div>
+</div>
+
+<div class="container-fluid part bg-grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <img class="svg" src="../../assets/svg/chronograph-160753.svg">
+      </div>
+      <div class="col-sm-8 text-center">
+        <h2 class="text-uppercase"> Track your progress!</h2>
+        <p>Using our dashboard you'll easily be able to track and manage tasks for each group member.
+          Monitor your progress from milestone to milestone with our interactive UI and calendar feature.
+          Never worry about having unfinished assignments/tasks again, we'll even send you an email when your due date is approaching!
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid part bg-grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 text-center">
+        <h2 class="text-uppercase">Are you a professor tired of D2L?</h2>
+        <p>Instead of trying to manage your group projects utilizing a schools branded website/intranet site, The Kanban Plan can help you to revolutionize your classroom experience.
+          Now you can easily manage and assign groups as well as quickly moving members between groups with only a few simple clicks. Our analytic services will allow you to easily see how each
+          group is progressing and the feedback students are leaving each other in regards to their projects. 
+        </p>
+      </div>
+      <div class="col-md-4">
+        <img class="svg" src="../../assets/svg/grad_cap.svg">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid text-center part bg-grey">
+  <h2 class="text-uppercase">our team</h2>
+
+  <div class="container">
+    <div class="row">
+      <div class="mt-2 col-sm-6">
+        <h3>Thomas Bart</h3>
+      </div>
+      <div class="mt-2 col-sm-6">
+        <h3>Sonu Patel</h3>
+      </div>
+      <div class="mt-2 col-sm-6">
+        <h3>Frank Lenoci</h3>
+      </div>
+      <div class="mt-2 col-sm-6">
+        <h3>Christopher Grau</h3>
+      </div>
+      <div class="mt-2 col-sm-6">
+        <h3>Anthony Cruz</h3>
+      </div>
+      <div class="mt-2 col-sm-6">
+        <h3>Amber Reese</h3>
+      </div>
+      <div class="mt-2 col-sm-6">
+        <h3>Jonah Roach</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid text-center part bg-blue">
+  <h2 class="text-uppercase">and more on the way...</h2>
+  <p>Discussion boards along with with many more features are still in the works! Come check them out soon!</p>
+</div>

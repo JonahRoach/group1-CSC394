@@ -1,0 +1,47 @@
+
+.jumbotron {
+    margin-bottom: 0px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.part {
+    padding: 2rem 3rem 1rem 3rem;
+}
+
+.screen-height {
+    height: 100vh;
+}
+
+.sign-in {
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.bg-blue {
+    background-color: #3186d6;
+    color: #ffffff;
+}
+
+.bg-yellow {
+    background-color: #ff97208e;
+    color: #3f3f3f
+}
+
+.bg-grey {
+    background-color: #d3d3d3;
+    color: #000000
+}
+
+.grey {
+    color: #999999;
+}
+
+.svg {
+    max-height: 30vh;
+    padding-bottom: 10px;
+    display: table;
+    margin: auto;
+}

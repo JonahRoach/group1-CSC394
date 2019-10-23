@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* 150px is the height of my footer */
+    padding-bottom: 150px;
+}
+
+.footer{  
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
