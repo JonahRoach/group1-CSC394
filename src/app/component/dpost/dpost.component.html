@@ -1,6 +1,7 @@
-<div class="card border-primary mb-3 img-fluid" style="max-width: 500rem; max-height: 100rem;">
+
+<div *ngIf="user" class="card border-primary mb-3 img-fluid" style="max-width: 500rem; max-height: 100rem;">
   <div class="card-header">
-    <img class="card-img-top" src="/assets/profile.png" alt="Card image" style="width: 4%;"> Name
+    <img class="card-img-top" src="/assets/profile.png" alt="Card image" style="width: 4%;"> {{user.name}}
     <div class="card-img">
     <a href='/post-detail/{{post.id}}' style="color:black;  outline-style: hidden;">{{post.title }}</a>
     </div>
