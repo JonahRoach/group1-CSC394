@@ -1,1 +1,120 @@
-<p>contact works!</p>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class= "card" style="padding: 30px; background-color: cadetblue; max-width: 100%;">
+            <div class="header" style="text-align: center;">
+                <h2>Questions or Concerns? Let Us Help!</h2>
+            </div>
+            <form>
+                <div class="form-group">
+                    <div class="field" style="padding-top:13px; padding-bottom:13px;">
+                    
+                        <label for="name" style="color:black; padding-left:5px;">
+                            Name
+                        </label>
+                        <input type="text" class = "form-control" id="name" placeholder = "Enter Name" required="required" />
+                    </div>
+                    
+                    <div class="field" style="padding-top:13px; padding-bottom:13px;">
+                        <label for="email" style="color:black; padding-left:10px;">
+                            Email Address
+                        </label>
+                        <input type = "email" class="form-control" id="email" placeholder="Enter Email" required="required" />
+                    </div>
+
+                    <div class="field" style="padding-top:13px; padding-bottom:13px;">
+                        <label for="subject" style="color:black; padding-left:10px;">
+                            Subject
+                        </label>
+                        <input type="text" class = "form-control" id="subject" placeholder = "Enter Subject" required="required" />
+                    </div>
+        
+                    <div class="field" style="padding-top:13px; padding-bottom:13px;">
+                        <label for="name" style="color:black; padding-left:10px;">
+                            Message
+                        </label>
+                        <textarea name = "message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="Message"></textarea>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="btn btn-light pull-left" id="btnContactUs" style = "padding: 5px; color:black;  margin:10px;">Send Message</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+
+    <!-- <div class = "contactContainer" style = "padding: 25px">
+        <div class="row">
+        <div class = "col-md-6">
+            <div class = "card bg-primary">
+            <form id=contactForm>
+                <div class = "row">
+                <div class = "col-md-6">
+                    <div class = "form-group">
+                        <label for="name" style="color:black; padding-left:10px;">
+                        Name
+                        </label>
+                        <input type="text" class = "form-control" id="name" placeholder = "Enter Name" required="required" />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" style="color:black; padding-left:10px;">
+                        Email Address
+                        </label>
+                        <div class = "input-group">
+                        <span class = "input-group-addon">
+                        <span class = "fa fa-envelope" style = "color:black; padding-left:10px; padding-right: 10px;"></span>
+                        </span>
+                        <input type = "email" class="form-control" id="email" placeholder="Enter Email" required="required" />
+                    </div>   
+                 </div>
+
+                    <div class = "form-group">
+                    <label for="subject" style="color:black; padding-left:10px;">
+                        Subject
+                    </label>
+                    <select id="subject" name = "subject" class = "form-control" required = "required">
+                        <option value="na" selected="">
+                        Choose One:
+                        </option>
+                        <option value = "service">
+                        Customer Service
+                        </option>
+                        <option value = "suggestions">
+                        Suggestions
+                        </option>
+                    </select>
+                    </div>
+                </div>  
+    
+                <div class = "form-group">
+                    <label for="name" style="color:black; padding-left:10px;">
+                    Message
+                    </label>
+                    <textarea name = "message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="Message">                
+                    </textarea>
+                </div>
+                </div>
+    
+                <div class="col-md-12">
+                <button type="submit" class="btn btn-light pull-right" id="btnContactUs" style = "padding: 5px; color:blue">Send Message</button>
+                </div>
+                
+            </form>
+            </div>
+        </div>
+        </div>
+    </div> -->
+        
+    </body>
+</html>

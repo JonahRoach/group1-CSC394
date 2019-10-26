@@ -1,0 +1,61 @@
+h3{
+    text-align: center;
+    margin-top: 15px;
+}
+
+label{
+    clear: both;
+    float:left;
+    margin-right: 60px;
+}
+
+.btn-class{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.firstlastname{
+    margin-left: 90px;
+    padding-left: 80px;
+    padding-top: 20px;
+}
+
+.form-control{
+    width:300px;
+}
+
+.userIcon{
+    float:left;
+    margin-left: 60px;
+}
+
+.userinfo{
+    clear: both;
+    margin-left: 60px;
+    margin-top: 80px;
+    padding-left: 40px;
+}
+
+#btnContactUs{
+    background-color: rgb(29, 104, 239);
+    color:white;
+    margin:10px;
+    padding: 5px 15px; 
+}
+
+#btnDeleteAcc{
+    background-color: white;
+    border-color: black;
+    color:rgb(29, 104, 239);
+    margin:5px;
+    padding: 5px 20px; 
+}
+
+#btnSignOut{
+    background-color: white;
+    border-color: white;
+    color:rgb(29, 104, 239);
+    margin:5px;
+    padding: 5px 10px; 
+    text-decoration: underline;
+}

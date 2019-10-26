@@ -1,1 +1,74 @@
-<p>profile works!</p>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class= "card" style="padding: 30px; max-width: 100%;">
+            <div class="header" style="text-align: center;">
+                <h2>Profile</h2>
+            </div>
+            <div class="row">
+                <div class = "col-md-5" style="border: 1px solid black; padding-top: 80px;">
+                    <div class="userIcon">
+                        <i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i>
+                    </div>
+                       
+                    <div class="firstlastname">
+                        <h4>FirstName LastName</h4>
+                    </div>
+
+                    <div class="userinfo">
+                        <p>Email: {{emai}}</p>
+                    </div>
+                    <div class="btn3-class" style="padding-top: 50px; padding-left: 190px;">
+                        <button type="submit" class="btn" id="btnSignOut">Sign Out</button>
+                    </div>
+                </div>
+
+                <div class = "col-md-7" style="border: 1px solid black; padding-bottom: 10px;">
+                    <h3>My Account</h3>
+                    <form>
+                        <div class="form-group" style="padding:20px 100px;">
+                            <div class="field" style="padding-top:13px; padding-bottom:13px;">
+                                <label for="name" style="color:black; padding-left:5px;">
+                                    Username:
+                                </label>
+                                <input type="text" class="form-control" id="username" placeholder="New Username" required="required"/>
+                             </div>
+                                
+                            <div class="field" style="padding-top:13px; padding-bottom:13px;">
+                                <label for="email" style="color:black; padding-left:10px; margin-right: 27px;">
+                                    Email Address:
+                                </label>
+                                <input type = "email" class="form-control" id="email" placeholder="New Email" required="required" />
+                            </div>
+        
+                            <div class="field" style="padding-top:13px; padding-bottom:13px;">
+                                <label for="subject" style="color:black; padding-left:10px;">
+                                    Password:
+                                </label>
+                                <input type="password" class = "form-control" id="subject" placeholder = "New Password" required="required" />
+                            </div>
+        
+                            <div class="btn-class">
+                                <button type="submit" class="btn" id="btnContactUs" >Update</button>
+                            </div>
+                        </div>
+                    </form>
+                    <hr style="border-color: black;">
+
+                    <div class="btn2-class">
+                        <button type="submit" class="btn" id="btnDeleteAcc" >Delete Account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

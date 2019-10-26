@@ -19,7 +19,9 @@
     "@angular/platform-browser": "~8.2.9",
     "@angular/platform-browser-dynamic": "~8.2.9",
     "@angular/router": "~8.2.9",
+    "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
+    "font-awesome": "^4.7.0",
     "rxjs": "~6.5.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
